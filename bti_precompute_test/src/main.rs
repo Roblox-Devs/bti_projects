@@ -58,7 +58,7 @@ fn search_aho_corasick(
     let bytes = string.as_bytes();
 
     let mut output: HashSet<String> = HashSet::new();
-    let patterns = &["<string"];
+    let patterns = &["<string", "<ProtectedString"];
     let ac = AhoCorasick::builder()
         .ascii_case_insensitive(false)
         .build(patterns)
